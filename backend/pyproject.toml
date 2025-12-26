@@ -27,6 +27,7 @@ dependencies = [
     "plone.api",
     "plone.restapi",
     "plone.volto",
+    "kitconcept.voltolighttheme",
 ]
 
 [project.optional-dependencies]
