@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="rfd2026"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="rfd2026: Install"
+      description="Package to configure a new rfd2026 site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <genericsetup:registerProfile
+      name="initial"
+      title="rfd2026: Example content"
+      description="Create example content to showcase the new website"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/initial"
+      pre_handler=".setuphandlers.initial.create_example_content"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="rfd2026: Uninstall"
+      description="Uninstall rfd2026 setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="rfd2026"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>
