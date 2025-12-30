@@ -41,7 +41,8 @@
     "@kitconcept/volto-slider-block",
     "@plonegovbr/volto-social-media",
     "@kitconcept/volto-logos-block",
-    "@kitconcept/volto-light-theme"
+    "@kitconcept/volto-light-theme",
+    "@eeacms/volto-matomo"
   ],
   "theme": "",
   "dependencies": {
@@ -55,6 +56,7 @@
     "@kitconcept/volto-heading-block": "^2.5.0",
     "@kitconcept/volto-highlight-block": "^4.5.1",
     "@kitconcept/volto-introduction-block": "^1.1.0",
+    "@eeacms/volto-matomo": "6.0.1",
     "@kitconcept/volto-light-theme": "^7.6.5",
     "@kitconcept/volto-logos-block": "^4.0.0-alpha.0",
     "@kitconcept/volto-separator-block": "^5.0.0-alpha.0",

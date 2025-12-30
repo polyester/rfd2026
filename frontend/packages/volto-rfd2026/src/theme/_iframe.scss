@@ -1,0 +1,57 @@
+.block.iframe {
+  iframe {
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+  }
+
+  &.align.center iframe {
+    max-width: var(--narrow-container-width);
+  }
+
+  &.align.wide iframe {
+    max-width: var(--default-container-width);
+  }
+
+  &.align.full iframe {
+    max-width: var(--layout-container-width);
+  }
+}
+
+.block.script .proca-widget {
+  max-width: var(--default-container-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.block.iframe,
+.block.script {
+  .toolbar-inner {
+    max-width: 350px;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+    }
+
+    button,
+    input {
+      width: 100%;
+      border: none;
+      background: none;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

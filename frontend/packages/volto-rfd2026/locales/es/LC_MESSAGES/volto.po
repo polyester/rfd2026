@@ -18,4 +18,85 @@ msgstr ""
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 "X-Generator: Poedit 2.2.1\n"
 
+#. Default: "Error"
+#: components/Blocks/Iframe/Edit
+msgid "Error"
+msgstr ""
 
+#. Default: "Height"
+#: components/Blocks/Iframe/schema
+msgid "Height"
+msgstr ""
+
+#. Default: "Iframe"
+#: components/Blocks/Iframe/Data
+#: components/Blocks/Iframe/schema
+msgid "Iframe"
+msgstr ""
+
+#. Default: "Invalid url"
+#: components/Blocks/Iframe/Edit
+msgid "Invalid url"
+msgstr ""
+
+#. Default: "No Iframe source selected"
+#: components/Blocks/Iframe/Data
+msgid "No Iframe source selected"
+msgstr ""
+
+#. Default: "No Script source selected"
+#: components/Blocks/Script/Data
+msgid "No Script source selected"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/Blocks/Iframe/schema
+msgid "Open in a new tab"
+msgstr ""
+
+#. Default: "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+#: components/Blocks/Iframe/schema
+msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+msgstr ""
+
+#. Default: "Script"
+#: components/Blocks/Script/Data
+#: components/Blocks/Script/schema
+msgid "Script"
+msgstr ""
+
+#. Default: "Source"
+#: components/Blocks/Iframe/schema
+#: components/Blocks/Script/schema
+msgid "Source"
+msgstr ""
+
+#. Default: "Title"
+#: components/Blocks/Iframe/schema
+msgid "Title"
+msgstr ""
+
+#. Default: "Values are in Pixels"
+#: components/Blocks/Iframe/schema
+msgid "Values are in Pixels"
+msgstr ""
+
+#. Default: "Width"
+#: components/Blocks/Iframe/schema
+msgid "Width"
+msgstr ""
+
+#. Default: "https://example.org"
+#: components/Blocks/Iframe/Edit
+msgid "https://example.org"
+msgstr ""
+
+#. Default: "https://example.org/script.js"
+#: components/Blocks/Script/Edit
+msgid "https://example.org/script.js"
+msgstr ""
+
+#. Default: "see WCAG 2.1"
+#: components/Blocks/Iframe/schema
+msgid "see WCAG 2.1"
+msgstr ""
