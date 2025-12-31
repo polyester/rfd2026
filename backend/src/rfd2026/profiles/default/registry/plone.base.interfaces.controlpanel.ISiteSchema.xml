@@ -4,6 +4,6 @@
            prefix="plone"
            purge="false"
   >
-    <value key="site_title">rfd2026</value>
+    <value key="site_title">Roze Filmdagen</value>
   </records>
 </registry>

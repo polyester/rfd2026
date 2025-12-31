@@ -18,6 +18,21 @@ msgstr ""
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 "X-Generator: Poedit 2.2.1\n"
 
+#. Default: "Country"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Country"
+msgstr ""
+
+#. Default: "Director"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Director"
+msgstr ""
+
+#. Default: "Download Event"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Download Event"
+msgstr ""
+
 #. Default: "Error"
 #: components/Blocks/Iframe/Edit
 msgid "Error"
@@ -34,9 +49,19 @@ msgstr ""
 msgid "Iframe"
 msgstr ""
 
+#. Default: "Invalid block - Will be removed on saving"
+#: components/theme/Views/ScreeningRenderBlocks
+msgid "Invalid Block"
+msgstr ""
+
 #. Default: "Invalid url"
 #: components/Blocks/Iframe/Edit
 msgid "Invalid url"
+msgstr ""
+
+#. Default: "Language"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Language"
 msgstr ""
 
 #. Default: "No Iframe source selected"
@@ -59,6 +84,11 @@ msgstr ""
 msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
 msgstr ""
 
+#. Default: "Running Time"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "RunningTime"
+msgstr ""
+
 #. Default: "Script"
 #: components/Blocks/Script/Data
 #: components/Blocks/Script/schema
@@ -71,9 +101,29 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
+#. Default: "Subtitles"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Subtitles"
+msgstr ""
+
+#. Default: "Buy Ticket"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Tickets"
+msgstr ""
+
 #. Default: "Title"
 #: components/Blocks/Iframe/schema
 msgid "Title"
+msgstr ""
+
+#. Default: "Type"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Type"
+msgstr ""
+
+#. Default: "Unknown Block {block}"
+#: components/theme/Views/ScreeningRenderBlocks
+msgid "Unknown Block"
 msgstr ""
 
 #. Default: "Values are in Pixels"
@@ -84,6 +134,51 @@ msgstr ""
 #. Default: "Width"
 #: components/Blocks/Iframe/schema
 msgid "Width"
+msgstr ""
+
+#. Default: "Year"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "Year"
+msgstr ""
+
+#. Default: "All dates"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_alldates"
+msgstr ""
+
+#. Default: "Attendees"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_attendees"
+msgstr ""
+
+#. Default: "Contact Name"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_contactname"
+msgstr ""
+
+#. Default: "Contact Phone"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_contactphone"
+msgstr ""
+
+#. Default: "Date"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_date"
+msgstr ""
+
+#. Default: "Website"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_website"
+msgstr ""
+
+#. Default: "When"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_when"
+msgstr ""
+
+#. Default: "Where"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "event_where"
 msgstr ""
 
 #. Default: "https://example.org"
@@ -99,4 +194,14 @@ msgstr ""
 #. Default: "see WCAG 2.1"
 #: components/Blocks/Iframe/schema
 msgid "see WCAG 2.1"
+msgstr ""
+
+#. Default: "Tags"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "tags"
+msgstr ""
+
+#. Default: "Visit external website"
+#: components/theme/ScreeningDetails/ScreeningDetails
+msgid "visit_external_website"
 msgstr ""

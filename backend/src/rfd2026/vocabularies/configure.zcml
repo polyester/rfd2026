@@ -1,5 +1,13 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <!-- -*- extra stuff goes here -*- -->
+  <utility
+      name="rfd2026.vocabularies.screening_types"
+      component=".screening_types.screening_types_vocabulary"
+      />
 
+  <utility
+      name="rfd2026.vocabularies.screening_dates"
+      component=".screening_dates.screening_dates_vocabulary"
+      />
 </configure>

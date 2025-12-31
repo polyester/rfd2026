@@ -4,6 +4,6 @@
            prefix="plone"
            purge="false"
   >
-    <value key="email_from_name">rfd2026</value>
+    <value key="email_from_name">Roze Filmdagen</value>
   </records>
 </registry>

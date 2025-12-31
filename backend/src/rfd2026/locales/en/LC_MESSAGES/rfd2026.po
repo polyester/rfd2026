@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-12-30 11:42+0000\n"
+"POT-Creation-Date: 2025-12-30 14:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,16 +14,76 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: rfd2026/content/screening.py:13
+msgid "Country"
+msgstr ""
+
 #: rfd2026/profiles.zcml:22
 msgid "Create example content to showcase the new website"
+msgstr ""
+
+#: rfd2026/content/screening.py:11
+msgid "Director"
+msgstr ""
+
+#: rfd2026/content/screening.py:26
+msgid "Enter the Link to the Ticketshop of this screening"
+msgstr ""
+
+#: rfd2026/content/screening.py:15
+msgid "Language"
 msgstr ""
 
 #: rfd2026/profiles.zcml:13
 msgid "Package to configure a new rfd2026 site"
 msgstr ""
 
+#: rfd2026/content/screening.py:12
+msgid "Running Time"
+msgstr ""
+
+#: rfd2026/profiles/default/registry/plone.app.querystring.xml
+msgid "Screening"
+msgstr ""
+
+#: rfd2026/content/screening.py:16
+msgid "Subtitles"
+msgstr ""
+
+#: rfd2026/content/screening.py:25
+msgid "Tickets"
+msgstr ""
+
+#: rfd2026/content/screening.py:18
+msgid "Type"
+msgstr ""
+
 #: rfd2026/profiles.zcml:30
 msgid "Uninstall rfd2026 setup."
+msgstr ""
+
+#: rfd2026/content/screening.py:14
+msgid "Year"
+msgstr ""
+
+#. Default: "Screening Date."
+#: rfd2026/profiles/default/registry/plone.app.querystring.xml
+msgid "description_screening_date"
+msgstr ""
+
+#. Default: "screening_type categorization."
+#: rfd2026/profiles/default/registry/plone.app.querystring.xml
+msgid "description_screening_types"
+msgstr ""
+
+#. Default: "Date"
+#: rfd2026/profiles/default/registry/plone.app.querystring.xml
+msgid "label_screening_date"
+msgstr ""
+
+#. Default: "Screening Type"
+#: rfd2026/profiles/default/registry/plone.app.querystring.xml
+msgid "label_screening_type"
 msgstr ""
 
 #: rfd2026/profiles.zcml:22

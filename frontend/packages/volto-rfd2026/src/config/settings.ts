@@ -8,11 +8,15 @@ import IframeEdit from '../components/Blocks/Iframe/Edit';
 import ScriptView from '../components/Blocks/Script/View';
 import ScriptEdit from '../components/Blocks/Script/Edit';
 
+import Screening from '../components/theme/Views/Screening';
+import ScreeningListingTemplate from 'volto-rfd2026/components/Blocks/ListingTemplate/ScreeningListingTemplate';
+
 export default function install(config: ConfigType) {
   // Language settings
   config.settings.isMultilingual = true;
   config.settings.supportedLanguages = ['en', 'nl'];
   config.settings.defaultLanguage = 'en';
+  config.settings.showTags = false;
   config.settings.matomoSiteId = '6';
   config.settings.matomoUrlBase = 'https://piwik.cleanclothes.org/';
 
@@ -62,6 +66,16 @@ export default function install(config: ConfigType) {
   config.blocks.blocksConfig.gridBlock.allowedBlocks.push('heading');
 
   config.blocks.requiredBlocks = [];
+
+  config.blocks.blocksConfig.listing.variations.push({
+    id: 'screening',
+    title: 'Screening',
+    template: ScreeningListingTemplate,
+  });
+
+  config.views.contentTypesViews['Screening'] = Screening;
+
+  config.blocks.blocksConfig.search.mostUsed = true;
 
   return config;
 }

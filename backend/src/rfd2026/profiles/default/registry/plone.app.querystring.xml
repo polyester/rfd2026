@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="rfd2026"
+>
+
+  <!-- Add options to search by screening date -->
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.screening_date"
+  >
+    <value key="title"
+           i18n:translate="label_screening_date"
+    >Date</value>
+    <value key="description"
+           i18n:translate="description_screening_date"
+    >Screening Date.</value>
+    <value key="enabled">True</value>
+    <value key="sortable">True</value>
+    <value key="group"
+           i18n:translate=""
+    >Screening</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.selection.any</element>
+    </value>
+    <value key="vocabulary">rfd2026.vocabularies.screening_dates</value>
+  </records>
+
+  <!-- Add options to search by screening_type -->
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.screening_type"
+  >
+    <value key="title"
+           i18n:translate="label_screening_type"
+    >Screening Type</value>
+    <value key="description"
+           i18n:translate="description_screening_types"
+    >screening_type categorization.</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="group"
+           i18n:translate=""
+    >Screening</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.selection.any</element>
+      <element>plone.app.querystring.operation.selection.all</element>
+    </value>
+    <value key="vocabulary">rfd2026.vocabularies.screening_types</value>
+  </records>
+
+</registry>

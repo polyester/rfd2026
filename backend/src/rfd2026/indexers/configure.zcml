@@ -1,7 +1,10 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <!-- Indexers/Metadata -->
-
+  <adapter
+      factory=".screening.date_indexer"
+      name="screening_date"
+      />
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

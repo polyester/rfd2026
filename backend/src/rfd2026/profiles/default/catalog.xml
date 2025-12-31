@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
-  <!-- Index
-  <index meta_type="FieldIndex"
-         name="industry"
+  <column value="director" />
+  <column value="running_time" />
+  <column value="country" />
+  <column value="film_language" />
+  <column value="year" />
+  <column value="subtitles" />
+  <column value="screening_type" />
+  <column value="ticket_link" />
+  <column value="trailer_url" />
+  <column value="keywords" />
+  <column value="screening_days" />
+
+
+  <index meta_type="KeywordIndex"
+         name="screening_type"
   >
-    <indexed_attr value="industry" />
+    <indexed_attr value="screening_type" />
   </index>
--->
-  <!-- Metadata
-  <column value="industry" />
--->
+
+
+  <index meta_type="FieldIndex"
+         name="screening_date"
+  >
+    <indexed_attr value="screening_date" />
+  </index>
+
+  <index meta_type="KeywordIndex"
+         name="keywords"
+  >
+    <indexed_attr value="keywords" />
+  </index>
+
+  <index meta_type="FieldIndex"
+         name="director"
+  >
+    <indexed_attr value="director" />
+  </index>
+
+
+
+  <column value="screening_type" />
+  <column value="director" />
 </object>

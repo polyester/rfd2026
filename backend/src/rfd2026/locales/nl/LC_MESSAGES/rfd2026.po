@@ -1,6 +1,3 @@
-#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-#SOME DESCRIPTIVE TITLE.
-#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,14 +9,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: rfd2026\n"
+"Domain: DOMAIN\n"
 
 #: rfd2026/content/screening.py:13
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #: rfd2026/profiles.zcml:22
 msgid "Create example content to showcase the new website"
@@ -27,15 +24,15 @@ msgstr ""
 
 #: rfd2026/content/screening.py:11
 msgid "Director"
-msgstr ""
+msgstr "Regisseur"
 
 #: rfd2026/content/screening.py:26
 msgid "Enter the Link to the Ticketshop of this screening"
-msgstr ""
+msgstr "Voer de link naar de ticketwinkel in voor deze screening"
 
 #: rfd2026/content/screening.py:15
 msgid "Language"
-msgstr ""
+msgstr "Taal"
 
 #: rfd2026/profiles.zcml:13
 msgid "Package to configure a new rfd2026 site"
@@ -43,19 +40,19 @@ msgstr ""
 
 #: rfd2026/content/screening.py:12
 msgid "Running Time"
-msgstr ""
+msgstr "Duur"
 
 #: rfd2026/profiles/default/registry/plone.app.querystring.xml
 msgid "Screening"
-msgstr ""
+msgstr "Screening"
 
 #: rfd2026/content/screening.py:16
 msgid "Subtitles"
-msgstr ""
+msgstr "Ondertiteling"
 
 #: rfd2026/content/screening.py:25
 msgid "Tickets"
-msgstr ""
+msgstr "Kaartjes"
 
 #: rfd2026/content/screening.py:18
 msgid "Type"
@@ -67,7 +64,7 @@ msgstr ""
 
 #: rfd2026/content/screening.py:14
 msgid "Year"
-msgstr ""
+msgstr "Jaar"
 
 #. Default: "Screening Date."
 #: rfd2026/profiles/default/registry/plone.app.querystring.xml
