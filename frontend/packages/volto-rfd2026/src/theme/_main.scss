@@ -1,2 +1,12 @@
 @import 'iframe';
 @import 'variables';
+
+@mixin word-break {
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+}

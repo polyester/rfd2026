@@ -99,9 +99,11 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
             <div className="title">
               <Icon name={infoSVG} size="48px" />
               &nbsp;
-              {content.screening_type.title},&nbsp;{content.director} ,&nbsp;
-              {content.running_time},&nbsp;{content.country},&nbsp;
-              {content.year}
+              {content.screening_type.title}
+              {content.director && <span> | {content.director}</span>}
+              {content.running_time && <span> | {content.running_time}</span>}
+              {content.country && <span> | {content.country}</span>}
+              {content.year && <span> | {content.year}</span>}
             </div>
           </div>
           <div className="detail">
@@ -114,18 +116,20 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
                 date={content.start}
                 includeTime
               />
-              ,&nbsp;{content.location}
-              <span class="ticketlink">
-                <a
-                  href={content.ticket_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon name={trolleySVG} size="48px" />
-                  &nbsp;
-                  {intl.formatMessage(messages.Tickets)}
-                </a>
-              </span>
+              {content.location && <span> | {content.location}</span>}
+              {content.ticket_link && (
+                <span className="ticketlink">
+                  <a
+                    href={content.ticket_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name={trolleySVG} size="48px" />
+                    &nbsp;
+                    {intl.formatMessage(messages.Tickets)}
+                  </a>
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -157,7 +161,7 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
                 {content.subjects.map((subject, index) => {
                   return (
                     <span key={index.toString()} className="subject">
-                      {subject}
+                      &nbsp;{subject}
                     </span>
                   );
                 })}

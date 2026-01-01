@@ -1,6 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ConditionalLink, FormattedDate } from '@plone/volto/components';
+import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
+import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
+import Card from '@kitconcept/volto-light-theme/primitives/Card/Card';
+import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
+import config from '@plone/volto/registry';
+import DefaultSummary from '@kitconcept/volto-light-theme/components/Summary/DefaultSummary';
+import cx from 'classnames';
+import infoSVG from '@plone/volto/icons/info.svg';
+import { Icon } from '@plone/volto/components';
 
 const ScreeningListingTemplate = ({
   items,
@@ -8,57 +16,90 @@ const ScreeningListingTemplate = ({
   linkHref,
   isEditMode,
 }) => {
+  let link = null;
+  let href = linkHref?.[0]?.['@id'] || '';
+  const PreviewImageComponent = config.getComponent('PreviewImage').component;
+
+  if (isInternalURL(href)) {
+    link = (
+      <ConditionalLink to={flattenToAppURL(href)} condition={!isEditMode}>
+        {linkTitle || href}
+      </ConditionalLink>
+    );
+  } else if (href) {
+    link = <a href={href}>{linkTitle || href}</a>;
+  }
+
   return (
     <>
-      <div className="items screening-listing">
-        {items.map((item) => (
-          <div className="listing-item" key={item['@id']}>
-            <ConditionalLink item={item} condition={!isEditMode}>
-              {item?.image_scales?.preview_image_link ? (
-                /*eslint-disable */
-                <img
-                  className="preview-image"
-                  src={
-                    item?.image_scales?.preview_image_link[0]?.base_path +
-                    '/' +
-                    item?.image_scales?.preview_image_link[0]?.scales?.preview
-                      ?.download
-                  }
-                  alt={item?.preview_alt_tag}
-                />
-              ) : (
-                /*eslint-enable */
-                <div className="preview-image-dummy" />
-              )}
-              <div className="headline">
-                {item.screening_type === 'Feature' ||
-                item.screening_type === 'Special' ? (
-                  <h2>{item.title ? item.title : item.id}</h2>
-                ) : (
-                  <h2>
-                    {item.screening_type} - {item.title ? item.title : item.id}
-                  </h2>
+      <div className="items">
+        {items.map((item) => {
+          const CustomItemBodyTemplate = config.getComponent({
+            name: 'GridListingItemTemplate',
+            dependencies: [item['@type']],
+          }).component;
+          const Summary =
+            config.getComponent({
+              name: 'Summary',
+              dependencies: [item['@type']],
+            }).component || DefaultSummary;
+          const showLink = !Summary.hideLink && !isEditMode;
+
+          const ItemBodyTemplate = (props) =>
+            CustomItemBodyTemplate ? (
+              <CustomItemBodyTemplate item={item} />
+            ) : (
+              <>
+                {item.image_field !== '' && (
+                  <Card.Image
+                    className="item-image"
+                    item={item}
+                    imageComponent={PreviewImageComponent}
+                  />
                 )}
-              </div>
-              <div className="listing-body">
                 <FormattedDate
                   className="date"
                   locale={'nl'}
                   date={item.start}
                   includeTime
                 />
-                <p>{item.description}</p>
-              </div>
-            </ConditionalLink>
-          </div>
-        ))}
+                <div className="title">
+                  {item.screening_type && <span>{item.screening_type}</span>}
+                  {item.director && <span> | {item.director}</span>}
+                  {item.running_time && <span> | {item.running_time}</span>}
+                  {item.country && <span> | {item.country}</span>}
+                  {item.year && <span> | {item.year}</span>}
+                </div>
+                <Card.Summary a11yLabelId={props.a11yLabelId}>
+                  <Summary item={item} HeadingTag="h2" />
+                </Card.Summary>
+              </>
+            );
+
+          return (
+            <div
+              className={cx('listing-item', {
+                [`${item['@type']?.toLowerCase()}-listing`]: item['@type'],
+              })}
+              key={item['@id']}
+            >
+              <Card item={showLink ? item : null}>
+                <ItemBodyTemplate item={item} />
+              </Card>
+            </div>
+          );
+        })}
       </div>
+
+      {link && <div className="footer">{link}</div>}
     </>
   );
 };
+
 ScreeningListingTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
 };
+
 export default ScreeningListingTemplate;

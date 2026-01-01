@@ -5,7 +5,7 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 
-EVENT_TYPES = ("Feature", "Short", "Docu", "Special")
+EVENT_TYPES = ("Feature", "Shorts", "Docu", "Special")
 
 
 @provider(IVocabularyFactory)
