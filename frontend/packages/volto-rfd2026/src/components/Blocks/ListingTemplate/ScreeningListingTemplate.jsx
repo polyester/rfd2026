@@ -7,8 +7,6 @@ import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
 import DefaultSummary from '@kitconcept/volto-light-theme/components/Summary/DefaultSummary';
 import cx from 'classnames';
-import infoSVG from '@plone/volto/icons/info.svg';
-import { Icon } from '@plone/volto/components';
 
 const ScreeningListingTemplate = ({
   items,
