@@ -10,3 +10,61 @@
   word-break: break-word;
   word-wrap: break-word;
 }
+
+body {
+  @include word-break;
+  div.breadcrumbs {
+    display: none;
+  }
+  #main .navigation .item {
+    color: #5b1644;
+  }
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h1.documentFirstHeading,
+  h2.documentFirstHeading,
+  h3.documentFirstHeading,
+  h4.documentFirstHeading,
+  h5.documentFirstHeading,
+  h6.documentFirstHeading,
+  .block.teaser h2,
+  .block.teaser p,
+  .block.teaser .headline,
+  .blocks-group-wrapper,
+  .block.search .search-details span {
+    color: #5b1644;
+  }
+  .facets,
+  .listing.message {
+    h2,
+    h3 {
+      color: #5b1644 !important;
+    }
+  }
+  .react-select-container {
+    .react-select__control {
+      border-color: #5b1644;
+    }
+    .react-select__option--is-focused {
+      background-color: #b3f0e8;
+      color: #5b1644 !important;
+    }
+    .react-select__option--is-selected {
+      background-color: #5b1644;
+      color: #b3f0e8;
+    }
+  }
+  header.header-wrapper .header .search-bar .searchbox input {
+    border-color: #1aa09c;
+    background-color: #b3f0e8 !important;
+    color: #5b1644;
+  }
+  header.header-wrapper .header .search-bar.active {
+    background-color: #1aa09c !important;
+  }
+}

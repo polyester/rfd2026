@@ -1,9 +1,19 @@
 $narrow-container-width: 1440px;
 $layout-container-width: 1440px;
 $default-container-width: 1440px;
-
+$primary-foreground-color: #5b1644 !important;
+$theme-foreground-color: #5b1644 !important;
 :root {
   --narrow-container-width: 1440px;
   --layout-container-width: 1440px;
   --default-container-width: 1440px;
+  --accent-color: #5b1644 !important;
+  --primary-color: #b3f0e8 !important;
+  --primary-foreground-color: #5b1644 !important;
+  --secondary-color: #b3f0e8 !important;
+  --secondary-foreground-color: #5b1644 !important;
+  --link-color: #b3f0e8 !important;
+  --link-foreground-color: #5b1644 !important;
+  --theme-color: #b3f0e8 !important;
+  --theme-foreground-color: #5b1644 !important;
 }
