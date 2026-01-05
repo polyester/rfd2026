@@ -62,10 +62,14 @@ const ScreeningListingTemplate = ({
                   includeTime
                 />
                 <div className="title">
-                  {item.screening_type && <span>{item.screening_type}</span>}
-                  {item.director && <span> | {item.director}</span>}
-                  {item.running_time && <span> | {item.running_time}</span>}
-                  {item.country && <span> | {item.country}</span>}
+                  {item.screening_type && (
+                    <span>{item.screening_type}&nbsp;</span>
+                  )}
+                  {item.director && <span> | {item.director}&nbsp;</span>}
+                  {item.running_time && (
+                    <span> | {item.running_time}&nbsp;</span>
+                  )}
+                  {item.country && <span> | {item.country}&nbsp;</span>}
                   {item.year && <span> | {item.year}</span>}
                 </div>
                 <Card.Summary a11yLabelId={props.a11yLabelId}>

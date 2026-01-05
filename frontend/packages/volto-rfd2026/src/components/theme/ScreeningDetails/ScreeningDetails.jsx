@@ -1,13 +1,13 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { FormattedDate } from '@plone/volto/components';
+import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
 import infoSVG from '@plone/volto/icons/info.svg';
 import calendarSVG from '@plone/volto/icons/calendar.svg';
 import volumeSVG from '@plone/volto/icons/volume.svg';
 import subtextSVG from '@plone/volto/icons/subtext.svg';
 import trolleySVG from '@plone/volto/icons/trolley.svg';
 import tagSVG from '@plone/volto/icons/tag.svg';
-import { Icon } from '@plone/volto/components';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 
 const messages = defineMessages({
   tags: {
@@ -97,13 +97,16 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
         <div className="row">
           <div className="detail">
             <div className="title">
-              <Icon name={infoSVG} size="48px" />
+              <Icon name={infoSVG} size="48px" /> {content.screening_type.title}
               &nbsp;
-              {content.screening_type.title}
-              {content.director && <span> | {content.director}</span>}
-              {content.running_time && <span> | {content.running_time}</span>}
-              {content.country && <span> | {content.country}</span>}
-              {content.year && <span> | {content.year}</span>}
+              {content.director && (
+                <span>&nbsp; |&nbsp; {content.director}</span>
+              )}{' '}
+              {content.running_time && (
+                <span>&nbsp; |&nbsp; {content.running_time}</span>
+              )}{' '}
+              {content.country && <span>&nbsp; |&nbsp; {content.country}</span>}{' '}
+              {content.year && <span>&nbsp; |&nbsp; {content.year}</span>}
             </div>
           </div>
           <div className="detail">
@@ -116,19 +119,8 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
                 date={content.start}
                 includeTime
               />
-              {content.location && <span> | {content.location}</span>}
-              {content.ticket_link && (
-                <span className="ticketlink">
-                  <a
-                    href={content.ticket_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon name={trolleySVG} size="48px" />
-                    &nbsp;
-                    {intl.formatMessage(messages.Tickets)}
-                  </a>
-                </span>
+              {content.location && (
+                <span>&nbsp; |&nbsp; {content.location}</span>
               )}
             </div>
           </div>
@@ -145,7 +137,7 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
           {content.subtitles && (
             <span className="detail">
               <span className="title">
-                <Icon name={subtextSVG} size="48px" />
+                <Icon name={subtextSVG} size="42px" />
                 &nbsp; {content.subtitles}
               </span>
             </span>
@@ -161,7 +153,7 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
                 {content.subjects.map((subject, index) => {
                   return (
                     <span key={index.toString()} className="subject">
-                      &nbsp;{subject}
+                      &nbsp;{subject}&nbsp;
                     </span>
                   );
                 })}
@@ -169,6 +161,21 @@ const ScreeningDetails = ({ content, display_as = 'aside' }) => {
             </div>
           </div>
         )}
+        <div className="row">
+          {content.ticket_link && (
+            <span className="ticketlink">
+              <a
+                href={content.ticket_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name={trolleySVG} size="48px" />
+                &nbsp;&nbsp;
+                {intl.formatMessage(messages.Tickets)}
+              </a>
+            </span>
+          )}
+        </div>
       </div>
     </>
   );

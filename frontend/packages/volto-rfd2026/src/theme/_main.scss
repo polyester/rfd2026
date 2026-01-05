@@ -16,6 +16,18 @@ body {
   div.breadcrumbs {
     display: none;
   }
+  .header-wrapper .header .logo-nav-wrapper .logo {
+    max-height: 160px;
+  }
+  .mobile-nav.mobile.only.tablet.only .menu-drawer {
+    background-color: #f0b3bb;
+  }
+  .block.highlight .teaser-item.top .highlight-description {
+    padding: 0 1em 100px;
+  }
+  &.section-search .ui.basic.segment.content-area main {
+    background: #fff !important;
+  }
   #main .navigation .item {
     color: #5b1644;
   }
@@ -32,12 +44,41 @@ body {
   h4.documentFirstHeading,
   h5.documentFirstHeading,
   h6.documentFirstHeading,
+  .accordion-block .ui.styled.accordion .title.accordion-title > span,
   .block.teaser h2,
   .block.teaser p,
   .block.teaser .headline,
   .blocks-group-wrapper,
   .block.search .search-details span {
     color: #5b1644;
+  }
+  .accordion-block .ui.styled.accordion .title.accordion-title.active > span {
+    color: #a7287d;
+  }
+  #page-document.event-view {
+    background: #fff !important;
+  }
+  .screening-header-container p.documentDescription {
+    color: #5b1644 !important;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+  }
+  .ticketlink a {
+    font-weight: bold;
+  }
+  .screening.details {
+    color: #a7287d !important;
+    font-weight: bold;
+    margin: 2em 0 1em 0;
+    svg.icon {
+      vertical-align: middle;
+    }
+    .subject {
+      font-weight: bold;
+    }
+  }
+  .screening-listing .date {
+    font-weight: bold;
   }
   .facets,
   .listing.message {

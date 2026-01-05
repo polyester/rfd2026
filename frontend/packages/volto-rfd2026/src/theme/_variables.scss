@@ -3,6 +3,7 @@ $layout-container-width: 1440px;
 $default-container-width: 1440px;
 $primary-foreground-color: #5b1644 !important;
 $theme-foreground-color: #5b1644 !important;
+
 :root {
   --narrow-container-width: 1440px;
   --layout-container-width: 1440px;
@@ -16,4 +17,14 @@ $theme-foreground-color: #5b1644 !important;
   --link-foreground-color: #5b1644 !important;
   --theme-color: #b3f0e8 !important;
   --theme-foreground-color: #5b1644 !important;
+  --highlight-custom-color-1: #b3f0e8;
+  --highlight-custom-color-2: #c9b3f0;
+  --highlight-custom-color-3: #f0b3bb;
+  --highlight-custom-color-4: #d9f0b3;
+  --highlight-custom-color-5: #2b1d24;
+  --highlight-custom-text-color-1: #5b1644;
+  --highlight-custom-text-color-2: #fff;
+  --highlight-custom-text-color-3: #fff;
+  --highlight-custom-text-color-4: #5b1644;
+  --highlight-custom-text-color-5: #fff;
 }
