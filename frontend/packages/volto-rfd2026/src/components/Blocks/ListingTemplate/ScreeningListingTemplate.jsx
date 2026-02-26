@@ -48,6 +48,12 @@ const ScreeningListingTemplate = ({
               <CustomItemBodyTemplate item={item} />
             ) : (
               <>
+                <FormattedDate
+                  className="date"
+                  locale={'nl'}
+                  date={item.start}
+                  includeTime
+                />
                 {item.image_field !== '' && (
                   <Card.Image
                     className="item-image"
@@ -55,12 +61,7 @@ const ScreeningListingTemplate = ({
                     imageComponent={PreviewImageComponent}
                   />
                 )}
-                <FormattedDate
-                  className="date"
-                  locale={'nl'}
-                  date={item.start}
-                  includeTime
-                />
+
                 <div className="title">
                   {item.screening_type && (
                     <span>{item.screening_type}&nbsp;</span>
