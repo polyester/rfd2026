@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG PLONE_VERSION=6.1.3
+ARG PLONE_VERSION=6.1.5
 FROM plone/server-builder:${PLONE_VERSION} AS builder
 
 WORKDIR /app
@@ -25,9 +25,9 @@ EOT
 FROM plone/server-acceptance:${PLONE_VERSION}
 
 LABEL maintainer="Paul Roeland <paul@cleanclothes.org>" \
-      org.label-schema.name="rfd2026-acceptance" \
-      org.label-schema.description="rfd2026 backend acceptance image." \
-      org.label-schema.vendor="Paul Roeland"
+    org.label-schema.name="rfd2026-acceptance" \
+    org.label-schema.description="rfd2026 backend acceptance image." \
+    org.label-schema.vendor="Paul Roeland"
 
 ENV CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,rfd2026"
 ENV APPLY_PROFILES="rfd2026:default"

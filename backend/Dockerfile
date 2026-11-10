@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG PLONE_VERSION=6.1.3
+ARG PLONE_VERSION=6.1.5
 FROM plone/server-builder:${PLONE_VERSION} AS builder
 
 WORKDIR /app
@@ -25,9 +25,9 @@ EOT
 FROM plone/server-prod-config:${PLONE_VERSION}
 
 LABEL maintainer="Paul Roeland <paul@cleanclothes.org>" \
-      org.label-schema.name="rfd2026-backend" \
-      org.label-schema.description="rfd2026 backend image." \
-      org.label-schema.vendor="Paul Roeland"
+    org.label-schema.name="rfd2026-backend" \
+    org.label-schema.description="rfd2026 backend image." \
+    org.label-schema.vendor="Paul Roeland"
 
 # Copy /app from builder
 COPY --from=builder /app /app
